@@ -554,7 +554,7 @@ xclip
 }
 
 .section-title p {
-    color: #999;
+    color: black;
     font-weight: 400;
     font-size: 18px;
     line-height: 33px;
@@ -573,7 +573,7 @@ xclip
 .section.colorsection p,
 .section.colorsection h3,
 .section.db h3 {
-    color: #ffffff;
+    color: black;
 }
 
 
@@ -664,9 +664,9 @@ xclip
 	mix-blend-mode: difference;
 }
 .services-inner-box h2{
-	font-size: 22px;
+	font-size: 22px; 
 	font-weight: 600;
-	color: #ffffff;
+	color: black;
 	mix-blend-mode: difference;
 }
 
