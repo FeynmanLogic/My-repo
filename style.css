@@ -744,7 +744,7 @@ xclip
     box-shadow: none;
     background-color: transparent;
     border: 1px solid #e6e7e6 !important;
-    color: #1f1f1f;
+    color: #312d2d;
     font-weight: 400;
     font-size: 13px;
     padding: 10px 30px;
@@ -828,7 +828,7 @@ xclip
 }
 
 .desc h3 i {
-    color: #cccccc;
+    color: #232121;
     font-size: 37px;
     vertical-align: middle;
     margin-right: 12px;
@@ -850,7 +850,7 @@ xclip
 }
 .testimonial h4 {
     font-size: 18px;
-    color: #333333;
+    color: #333131;
     padding: 13px 0 0;
 }
 
@@ -879,7 +879,7 @@ xclip
 .testimonial small,
 .testimonial .lead {
     background-color: transparent;
-    color: #aaa;
+    color: #554e4e;
     display: block;
     font-size: 16px;
     font-style: normal;
