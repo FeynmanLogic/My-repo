@@ -670,12 +670,20 @@ xclip
 	mix-blend-mode: difference;
 }
 
-.services-inner-box p{
-	font-size: 16px;
-	font-weight: 200;
-	color: yellow;
-	mix-blend-mode: difference;
+.services-inner-box p {
+    font-size: 16px;
+    font-weight: 200;
+    color: black;
+    mix-blend-mode: difference;
 }
+
+.services-inner-box:hover p {
+    color: yellow; /* Change to any color you prefer */
+    font-size: 18px; /* Optional: You can also adjust the font size */
+    font-weight: 400; /* Optional: Change the font weight */
+    background-color: black; /* Optional: Add background change */
+}
+
 
 
 
@@ -1212,7 +1220,7 @@ xclip
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 15px;
-    color: #999;
+    color: black;
 }
 
 .message-box h2 {
@@ -1227,6 +1235,7 @@ xclip
 
 .message-box p {
     margin-bottom: 20px;
+    color:black
 }
 
 .message-box .lead {
