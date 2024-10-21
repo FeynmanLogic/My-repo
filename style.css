@@ -666,14 +666,14 @@ xclip
 .services-inner-box h2{
 	font-size: 22px; 
 	font-weight: 600;
-	color: black;
+	color: yellow;
 	mix-blend-mode: difference;
 }
 
 .services-inner-box p{
 	font-size: 16px;
 	font-weight: 200;
-	color: black;
+	color: yellow;
 	mix-blend-mode: difference;
 }
 
