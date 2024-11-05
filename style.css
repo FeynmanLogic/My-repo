@@ -6,6 +6,8 @@
     IMPORT FONTS
 -------------------------------------------------------------------*/
 
+
+
 @import url('https://fonts.googleapis.com/css?family=Cambo');
 @import url('https://fonts.googleapis.com/css?family=Lustria');
 
@@ -591,21 +593,11 @@ xclip
 	display: inline-block;
 }
 
-.btn-hover-lt::before {
-	transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	content: '';
-	width: 50%;
-	height: 100%;
-	background: #241c65;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 10px 0px 0px 10px;
-}
+
 
 .btn-hover-lt .btn-text {
   color: white;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
 }
 .btn-hover-lt:hover::before {
   background: #241c65;
@@ -645,44 +637,51 @@ xclip
     z-index: 1;
     position: relative;
 }
-
-.services-inner-box{
-	padding: 15px;
-	background: #ffffff;
-	margin-bottom: 30px;
-	position: relative;
-}
-.ser-icon{
-	width: 90px;
-	height: 90px;
-	text-align: center;
-	line-height: 90px;
-}
-.ser-icon i{
-	font-size: 50px;
-	color: #ffffff;
-	mix-blend-mode: difference;
-}
-.services-inner-box h2{
-	font-size: 22px; 
-	font-weight: 600;
-	color: yellow;
-	mix-blend-mode: difference;
+.right-box-pro img.img-fluid.img-rounded {
+    width: 510px !important;
+    height: 680px !important;
+    object-fit: cover;
+    border-radius: 10px; /* Optional for rounded corners */
 }
 
+
+
+.services-inner-box {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px; /* Optional for a softer edge */
+}
+
+.services-inner-box h2,
 .services-inner-box p {
-    font-size: 16px;
-    font-weight: 200;
-    color: black;
-    mix-blend-mode: difference;
+    color: #000000; /* Black text for headers and paragraphs */
 }
 
-.services-inner-box:hover p {
-    color: yellow; /* Change to any color you prefer */
-    font-size: 18px; /* Optional: You can also adjust the font size */
-    font-weight: 400; /* Optional: Change the font weight */
-    background-color: black; /* Optional: Add background change */
+.ser-icon {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    cursor: default;
+    background-color: #241c65; /* Background for contrast */
+    color: #ffffff !important; /* White text for high contrast */
 }
+
+.ser-icon i {
+    font-size: 50px;
+    color: #ffffff !important;
+    mix-blend-mode: normal; /* Set to normal to remove blending issues */
+    opacity: 1; /* Ensure full opacity */
+    z-index: 1;
+}
+
+
+
+
+
 
 
 

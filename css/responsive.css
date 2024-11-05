@@ -137,6 +137,15 @@
 	.right-box-pro .card-front{
 		display: none;
 	}
+	.right-box-pro img {
+		width: 510px;
+		height: 680px;
+		object-fit: cover; /* This will ensure the image scales nicely without stretching */
+		max-width: 100%; /* Makes it responsive */
+		border-radius: 10px; /* Optional: keeps the rounded corners if desired */
+	}
+	
+
 	.message-box{
 		padding: 0px;
 		margin-top: 30px;

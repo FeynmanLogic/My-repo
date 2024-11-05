@@ -165,14 +165,7 @@ ul, li {
 }
 #content #slider .navigation ul li .li__info h4,
 #content #slider .navigation ul li .li__info-mask .mask__infoContainer h4 {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0px;
-  color: white;
-  float: left;
-  padding-left: 6px;
-  text-transform: uppercase;
+display: none;
 }
 #content #slider .navigation ul li .li__info-mask {
   width: 0%;
