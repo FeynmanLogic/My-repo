@@ -22,6 +22,79 @@
     body {
         font-family: 'Inter', sans-serif;
     }
+
+/* Timeline base */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Vertical line (desktop only) */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: #1e3a75;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* Left & right alignment */
+.timeline-item.left { left: 0; }
+.timeline-item.right { left: 50%; }
+
+/* Card */
+.timeline-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Dot */
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: #1e3a75;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  z-index: 2;
+}
+
+.timeline-item.left .timeline-dot { right: -8px; }
+.timeline-item.right .timeline-dot { left: -8px; }
+
+/* 📱 Mobile Fix */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 15px;
+    left: 0 !important;
+    margin-bottom: 20px;
+  }
+
+  .timeline-dot {
+    left: 0;
+    right: auto;
+  }
+}
+
 </style>
 
     <!-- Bootstrap CSS -->
@@ -157,6 +230,8 @@ Currently I am working as a Hardware Design Engineer at the awesome 9Corner Solu
                   <a href="https://github.com/FeynmanLogic/KANBoost" target="_blank" style="color: #241c65;">
                     <i class="fab fa-github mr-1"></i>View on GitHub
                   </a>
+                 
+                 <a href="https://drive.google.com/file/d/1HL7A9dzTN8W_wrsCyhZOoTKaGWZkLWWQ/view?usp=sharing" target="_blank" style="color: blue;">Certificate</a> 
                 </p>
               </div>
             </div>
@@ -206,53 +281,53 @@ Currently I am working as a Hardware Design Engineer at the awesome 9Corner Solu
     <hr style="border: 1px solid #e0e0e0; margin: 0; width: 100%;">
 <!-- Education Timeline Section -->
 <!-- Education Timeline Section -->
-<div id="education" class="section lb" style="padding: 60px 0; background: linear-gradient(135deg, #f9f9f9 0%, #eef2f7 100%);">
-  <div class="container">
-    <div class="section-title text-center" style="margin-bottom: 50px;">
-      <h3 style="font-size: 32px; color: #1e3a75; font-weight: bold;">Education</h3>
-      <p style="font-size: 16px; color: #555;">My academic journey so far</p>
+<p style="font-size:16px;color:#555;text-align:center;margin-bottom:30px;">
+  My academic journey so far
+</p>
+
+<div class="timeline">
+
+  <!-- B.Tech -->
+  <div class="timeline-item left">
+    <div class="timeline-card">
+      <h4 style="color:#1e3a75;font-weight:600;margin-bottom:6px;">
+        B.Tech in Computer Engineering
+      </h4>
+      <p style="margin:4px 0;">S.V. National Institute of Technology, Surat</p>
+      <p style="font-size:14px;color:#777;"><strong>2021 – 2025</strong></p>
+      <p style="color:#555;">Computer Science & Engineering specialization</p>
     </div>
-
-    <div class="timeline" style="position: relative; max-width: 900px; margin: auto;">
-      
-      <!-- Education Item 1 -->
-      <div class="timeline-item" style="padding: 20px 40px; position: relative; width: 50%; left: 0;">
-        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;">
-          <h4 style="color: #1e3a75; font-weight: bold; font-size: 20px;">B.Tech in Computer Engineering</h4>
-          <p style="color: #333; margin: 8px 0;">S.V. National Institute of Technology, Surat</p>
-          <p style="color: #777; font-size: 14px;"><strong>2021 - 2025</strong></p>
-          <p style="color: #555;">Specialization in Computer Science & Engineering</p>
-        </div>
-        <div class="circle" style="width: 20px; height: 20px; background: #1e3a75; border-radius: 50%; position: absolute; top: 20px; right: -10px;"></div>
-      </div>
-
-      <!-- Education Item 2 -->
-      <div class="timeline-item" style="padding: 20px 40px; position: relative; width: 50%; left: 50%;">
-        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;">
-          <h4 style="color: #1e3a75; font-weight: bold; font-size: 20px;">High School</h4>
-          <p style="color: #333; margin: 8px 0;">Cambridge College of Arts, Science & Commerce</p>
-          <p style="color: #777; font-size: 14px;"><strong>2019 - 2021</strong></p>
-          <p style="color: #555;">Studied Physics, Chemistry, and Mathematics</p>
-        </div>
-        <div class="circle" style="width: 20px; height: 20px; background: #1e3a75; border-radius: 50%; position: absolute; top: 20px; left: -10px;"></div>
-      </div>
-
-      <!-- Education Item 3 -->
-      <div class="timeline-item" style="padding: 20px 40px; position: relative; width: 50%; left: 0;">
-        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;">
-          <h4 style="color: #1e3a75; font-weight: bold; font-size: 20px;">Initial Schooling</h4>
-          <p style="color: #333; margin: 8px 0;">Podar International School, Pimpri</p>
-          <p style="color: #777; font-size: 14px;"><strong>2005 - 2019</strong></p>
-          <p style="color: #555;">Foundation years of learning</p>
-        </div>
-        <div class="circle" style="width: 20px; height: 20px; background: #1e3a75; border-radius: 50%; position: absolute; top: 20px; right: -10px;"></div>
-      </div>
-
-      <!-- Vertical Line -->
-      <div style="content:''; position: absolute; width: 3px; background: #1e3a75; top: 0; bottom: 0; left: 50%; margin-left: -1.5px;"></div>
-    </div>
+    <div class="timeline-dot"></div>
   </div>
+
+  <!-- High School -->
+  <div class="timeline-item right">
+    <div class="timeline-card">
+      <h4 style="color:#1e3a75;font-weight:600;margin-bottom:6px;">
+        Higher Secondary Education
+      </h4>
+      <p style="margin:4px 0;">Cambridge College of Arts, Science & Commerce</p>
+      <p style="font-size:14px;color:#777;"><strong>2019 – 2021</strong></p>
+      <p style="color:#555;">Physics, Chemistry, Mathematics</p>
+    </div>
+    <div class="timeline-dot"></div>
+  </div>
+
+  <!-- School -->
+  <div class="timeline-item left">
+    <div class="timeline-card">
+      <h4 style="color:#1e3a75;font-weight:600;margin-bottom:6px;">
+        Schooling
+      </h4>
+      <p style="margin:4px 0;">Podar International School, Pimpri</p>
+      <p style="font-size:14px;color:#777;"><strong>2005 – 2019</strong></p>
+      <p style="color:#555;">Foundational education</p>
+    </div>
+    <div class="timeline-dot"></div>
+  </div>
+
 </div>
+
 
 <style>
   .timeline-item:hover div {
