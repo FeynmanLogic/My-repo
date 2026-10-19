@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 
     <!-- Basic -->
     <meta charset="utf-8">
@@ -9,9 +10,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
      <!-- Site Metas -->
-    <title>Dhruv Kulkarni's portfolio</title>  
+    <title>Dhruv Kulkarni | Efficient AI Systems and Computer Architecture</title>  
     <meta name="keywords" content="Computer Architecture, AI, Machine Learning, Prefetching, Transformers">
-    <meta name="description" content="Dhruv Kulkarni's personal website showcasing his work on solving the memory wall problem through Computer Architecture, Prefetching, and AI">
+    <meta name="description" content="Dhruv Kulkarni's work in efficient AI systems, computer architecture, hardware acceleration, and hardware-software co-design">
     <meta name="author" content="Dhruv Kulkarni">
 
     <!-- Site Icons -->
@@ -22,6 +23,163 @@
     body {
         font-family: 'Inter', sans-serif;
     }
+
+/* Research map */
+.research-map-section {
+  padding: 78px 0;
+  color: #eef2ff;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(77, 111, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 90% 85%, rgba(38, 208, 180, 0.16), transparent 34%),
+    #091126;
+  overflow: hidden;
+}
+
+.research-map-intro {
+  max-width: 790px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.research-map-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #7dd3fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.research-map-intro h3 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+}
+
+.research-map-intro p {
+  margin: 0;
+  color: #b9c3dc;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.research-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 46px 28px;
+}
+
+.research-stage {
+  position: relative;
+  min-height: 250px;
+  padding: 24px 22px 21px;
+  border: 1px solid rgba(158, 177, 230, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.research-stage:hover {
+  transform: translateY(-6px);
+  border-color: rgba(125, 211, 252, 0.62);
+  background: rgba(255, 255, 255, 0.085);
+}
+
+.research-stage:not(:nth-child(4)):not(:nth-child(8))::after {
+  content: '\2192';
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  color: #66d9c5;
+  font-size: 28px;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+.stage-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  border-radius: 12px;
+  color: #7dd3fc;
+  background: rgba(56, 96, 196, 0.24);
+  font-weight: 700;
+}
+
+.research-stage h4 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.research-stage p {
+  min-height: 66px;
+  margin: 0 0 16px;
+  color: #b9c3dc;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.project-tags span {
+  padding: 5px 9px;
+  border: 1px solid rgba(102, 217, 197, 0.26);
+  border-radius: 999px;
+  color: #9cebdd;
+  background: rgba(32, 165, 143, 0.1);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.research-loop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 760px;
+  margin: 40px auto 0;
+  color: #c8d2eb;
+  font-size: 14px;
+  text-align: center;
+}
+
+.research-loop::before,
+.research-loop::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(125, 211, 252, .65));
+}
+
+.research-loop::after {
+  background: linear-gradient(90deg, rgba(125, 211, 252, .65), transparent);
+}
+
+@media (max-width: 991px) {
+  .research-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .research-stage::after { display: none; }
+}
+
+@media (max-width: 575px) {
+  .research-map-section { padding: 58px 0; }
+  .research-flow { grid-template-columns: 1fr; gap: 18px; }
+  .research-stage { min-height: auto; }
+  .research-stage p { min-height: auto; }
+}
 
 /* Timeline base */
 .timeline {
@@ -147,10 +305,13 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research-map">What I Work On</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#extra-curricular" target="_blank">Extra-Curricular</a>
+                        <a class="nav-link js-scroll-trigger" href="#extra-curricular">Extra-Curricular</a>
                     </li>
                     <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
                     <!-- <li class="nav-item">
@@ -177,13 +338,12 @@
     
                 <div class="col-md-6">
                     <h2 style="font-size: 28px; color: #241c65; font-weight: bold; margin-bottom: 20px; text-align: left;">Hi!</h2>
-                    <p style="font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 15px;">I am Dhruv Kulkarni, a B.Tech graduate from NIT Surat. I use Machine Learning to build better hardware, and build better hardware to boost Machine Learning
+                    <p style="font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 15px;">I am Dhruv Kulkarni, an M.S. student in Electrical and Computer Engineering at Georgia Tech. I use machine learning to build better hardware, and build better hardware to accelerate machine learning.
                     </p>
            
                     <p style="font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 15px;">
-                        My philosophy is rooted in a Sanskrit idea: “The one with horses commands land, prosperity, and growth.” In today’s world, I believe compute is the new cavalry — powering innovation and transformation.
-
-I am currently a Master's student at Georgia Institute of Technology, exploring Special problems under the supervision of Dr. Cong Hao. 
+                        My philosophy is rooted in a Sanskrit idea: “The one with horses commands land, prosperity, and growth.” Today, I see compute as the new cavalry, powering innovation and transformation. At Georgia Tech, I study efficient AI systems and hardware-software co-design under the supervision of Dr. Cong Hao.
+                    </p>
 
   
                     <!-- <p style="font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 15px;">Currently, I am a research intern at the awesome HART Lab at GMU, and I am tremendously enjoying all associated activities.</p> -->
@@ -194,6 +354,76 @@ I am currently a Master's student at Georgia Institute of Technology, exploring 
             </div>
         </div>
     </div>
+    
+    <section id="research-map" class="research-map-section" aria-labelledby="research-map-title">
+      <div class="container">
+        <div class="research-map-intro">
+          <span class="research-map-kicker">My research stack</span>
+          <h3 id="research-map-title">From ML models to efficient machines</h3>
+          <p>I work across the hardware-software boundary. I begin with model behavior, expose computational and memory bottlenecks, design optimizations and architectures around them, and carry promising ideas into implementable hardware.</p>
+        </div>
+
+        <div class="research-flow">
+          <article class="research-stage">
+            <div class="stage-number">01</div>
+            <h4>ML models and workloads</h4>
+            <p>Transformers, reinforcement learning, KANs, and scientific workloads define the computation to accelerate.</p>
+            <div class="project-tags"><span>TransLearn</span><span>ActAgen</span><span>KANs</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">02</div>
+            <h4>Algorithmic optimization</h4>
+            <p>Reduce unnecessary training, inference, and data movement through compact representations and smarter sampling.</p>
+            <div class="project-tags"><span>Knowledge distillation</span><span>Active learning</span><span>HDC</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">03</div>
+            <h4>Workload characterization</h4>
+            <p>Profile phases, kernels, memory behavior, and hardware counters to locate the real system bottleneck.</p>
+            <div class="project-tags"><span>CUDA profiling</span><span>Roofline analysis</span><span>DQN phases</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">04</div>
+            <h4>Memory-system optimization</h4>
+            <p>Move and predict data more intelligently using learned prefetching and processing close to memory.</p>
+            <div class="project-tags"><span>KANBoost</span><span>Prefetching</span><span>GenoPIM</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">05</div>
+            <h4>Accelerator architecture</h4>
+            <p>Translate mathematical structure into parallel datapaths, banked memories, and workload-specific compute units.</p>
+            <div class="project-tags"><span>KANPIM</span><span>9-lane datapath</span><span>LUT-based PIM</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">06</div>
+            <h4>Hardware implementation</h4>
+            <p>Build synthesizable designs using RTL, fixed-point arithmetic, FPGA tools, and high-level synthesis workflows.</p>
+            <div class="project-tags"><span>Verilog</span><span>Vivado</span><span>hls4ml</span><span>Vitis HLS</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">07</div>
+            <h4>Design automation</h4>
+            <p>Improve how hardware is generated, simulated, and evaluated using LLMs and faster design-space exploration.</p>
+            <div class="project-tags"><span>MultModLM</span><span>LLM-to-RTL</span><span>LightningSim</span></div>
+          </article>
+
+          <article class="research-stage">
+            <div class="stage-number">08</div>
+            <h4>System evaluation</h4>
+            <p>Measure whether the design wins on latency, throughput, IPC, resource use, energy, and correctness.</p>
+            <div class="project-tags"><span>PPA</span><span>ChampSim</span><span>FPGA synthesis</span><span>Verification</span></div>
+          </article>
+        </div>
+
+        <div class="research-loop">Measured results feed back into model, memory, and architecture choices. This is the co-design loop.</div>
+      </div>
+    </section>
     
     <div id="projects" class="section lb" style="padding: 50px 0; background-color: #f9f9f9;">
         <div class="container">
@@ -207,7 +437,7 @@ I am currently a Master's student at Georgia Institute of Technology, exploring 
             <div class="col-md-4 mb-4">
               <div class="services-inner-box" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                 <h2 style="font-size: 24px; font-weight: bold; color: #241c65; text-align: center;">Transarch</h2>
-                <p style="text-align: justify; font-size: 16px;">A unified architectural optimization for transformers, integrating prefetching, Processing in Memory, and software-side optimizations. Developed under Dr. Sai Manoj (GMU), under w.</p>
+                <p style="text-align: justify; font-size: 16px;">A unified architectural optimization for transformers, integrating prefetching, processing-in-memory, and software-side optimizations. Developed under Dr. Sai Manoj P.D. at George Mason University.</p>
               </div>
             </div>
       
@@ -278,18 +508,30 @@ I am currently a Master's student at Georgia Institute of Technology, exploring 
       
     <hr style="border: 1px solid #e0e0e0; margin: 0; width: 100%;">
 <!-- Education Timeline Section -->
-<!-- Education Timeline Section -->
 <p style="font-size:16px;color:#555;text-align:center;margin-bottom:30px;">
   My academic journey so far
 </p>
 
 <div class="timeline">
 
+  <!-- M.S. -->
+  <div class="timeline-item right">
+    <div class="timeline-card">
+      <h4 style="color:#1e3a75;font-weight:600;margin-bottom:6px;">
+        M.S. in Electrical and Computer Engineering
+      </h4>
+      <p style="margin:4px 0;">Georgia Institute of Technology, Atlanta</p>
+      <p style="font-size:14px;color:#777;"><strong>2026 - Present</strong></p>
+      <p style="color:#555;">Computer architecture, hardware acceleration, digital systems, and hardware-software co-design</p>
+    </div>
+    <div class="timeline-dot"></div>
+  </div>
+
   <!-- B.Tech -->
   <div class="timeline-item left">
     <div class="timeline-card">
       <h4 style="color:#1e3a75;font-weight:600;margin-bottom:6px;">
-        B.Tech in Computer Engineering
+        B.Tech in Computer Science and Engineering
       </h4>
       <p style="margin:4px 0;">S.V. National Institute of Technology, Surat</p>
       <p style="font-size:14px;color:#777;"><strong>2021 – 2025</strong></p>
@@ -409,7 +651,7 @@ I am currently a Master's student at Georgia Institute of Technology, exploring 
                         </a> 
                     </p>
                     <p class="footer-company-name">
-                        All Rights Reserved. &copy; 2024 <a href="#">Dhruv Kulkarni</a> Design By: 
+                        All Rights Reserved. &copy; 2026 <a href="#">Dhruv Kulkarni</a> Design By: 
                         <a href="https://html.design/">html design</a>
                     </p>
                 </div>
