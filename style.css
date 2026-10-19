@@ -10,7 +10,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cambo');
 @import url('https://fonts.googleapis.com/css?family=Lustria');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /*------------------------------------------------------------------
     IMPORT FILES
@@ -2571,7 +2570,7 @@ select.mobile-device {
 body {
     color: var(--ink);
     background: var(--parchment-light);
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'Lustria', serif;
 }
 
 h1,
@@ -2581,7 +2580,6 @@ h4,
 h5,
 h6 {
     color: var(--indigo);
-    font-family: 'Inter', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -2730,7 +2728,6 @@ h6 {
 
 .research-stage h4 {
     color: var(--white) !important;
-    font-family: 'Inter', Arial, sans-serif;
 }
 
 .research-stage p {
@@ -2847,5 +2844,5 @@ a,
 .research-map-kicker,
 .navbar-nav,
 .research-stage h4 {
-    font-family: 'Lustria', serif;
+    font-family: 'Lustria', serif !important;
 }
