@@ -2832,3 +2832,20 @@ h6 {
         border-top-width: 2px;
     }
 }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+.btn,
+.project-tags,
+.research-map-kicker,
+.navbar-nav,
+.research-stage h4 {
+    font-family: 'Lustria', serif;
+}
