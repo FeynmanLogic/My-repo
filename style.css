@@ -2571,16 +2571,6 @@ select.mobile-device {
 body {
     color: var(--ink);
     background: var(--parchment-light);
-    font-family: 'Lustria', Georgia, serif;
-}
-
-p,
-li,
-a,
-.btn,
-.project-tags,
-.research-map-kicker,
-.navbar-nav {
     font-family: 'Inter', Arial, sans-serif;
 }
 
@@ -2591,7 +2581,8 @@ h4,
 h5,
 h6 {
     color: var(--indigo);
-    font-family: 'Cambo', Georgia, serif;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700;
 }
 
 /* Navigation: crisp technology with a warm heritage accent */
@@ -2739,7 +2730,7 @@ h6 {
 
 .research-stage h4 {
     color: var(--white) !important;
-    font-family: 'Cambo', Georgia, serif;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 .research-stage p {
