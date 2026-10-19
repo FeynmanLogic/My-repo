@@ -10,6 +10,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cambo');
 @import url('https://fonts.googleapis.com/css?family=Lustria');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /*------------------------------------------------------------------
     IMPORT FILES
@@ -2413,7 +2414,7 @@ select.mobile-device {
     color: #999 !important;
     margin: 0 !important;
     padding: 0 !important;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 .stat-wrap p {
@@ -2422,7 +2423,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 #preloader {
@@ -2542,4 +2543,301 @@ select.mobile-device {
 .btn-light:focus {
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*------------------------------------------------------------------
+    DHRUV THEME: TECHNOLOGY x TRADITION
+-------------------------------------------------------------------*/
+
+:root {
+    --ink: #202033;
+    --indigo: #241c65;
+    --indigo-deep: #0b1230;
+    --indigo-soft: #51458f;
+    --teal: #2e9f91;
+    --teal-light: #8ed8cd;
+    --saffron: #d9902f;
+    --copper: #a85f32;
+    --gold-light: #f2c879;
+    --parchment: #f7f1e7;
+    --parchment-light: #fcfaf6;
+    --stone: #e7dfd2;
+    --muted: #686577;
+    --white: #ffffff;
+    --soft-shadow: 0 12px 34px rgba(36, 28, 101, 0.10);
+}
+
+body {
+    color: var(--ink);
+    background: var(--parchment-light);
+    font-family: 'Lustria', Georgia, serif;
+}
+
+p,
+li,
+a,
+.btn,
+.project-tags,
+.research-map-kicker,
+.navbar-nav {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--indigo);
+    font-family: 'Cambo', Georgia, serif;
+}
+
+/* Navigation: crisp technology with a warm heritage accent */
+.navbar-dark,
+#mainNav.navbar-shrink {
+    background: rgba(252, 250, 246, 0.97);
+    border-bottom: 2px solid rgba(217, 144, 47, 0.55);
+    box-shadow: 0 6px 24px rgba(36, 28, 101, 0.08);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--indigo);
+    font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link::before,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--indigo), var(--indigo-soft));
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--white);
+}
+
+/* Warm page surfaces connect the light sections to the dark research stack */
+.section.wb,
+#about {
+    background: var(--parchment-light) !important;
+}
+
+.section.lb,
+#projects,
+#extra-curricular {
+    background:
+        radial-gradient(circle at 8% 15%, rgba(217, 144, 47, 0.08), transparent 26%),
+        var(--parchment) !important;
+}
+
+.section-title h3 {
+    color: var(--indigo) !important;
+}
+
+.section-title h3::after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 3px;
+    margin: 15px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--saffron), var(--teal));
+}
+
+.section-title p,
+.lead {
+    color: var(--muted);
+}
+
+/* Shared card language */
+.services-inner-box,
+.timeline-card {
+    border: 1px solid rgba(36, 28, 101, 0.10);
+    border-top: 3px solid var(--saffron);
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    box-shadow: var(--soft-shadow) !important;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.services-inner-box:hover,
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(46, 159, 145, 0.42);
+    box-shadow: 0 18px 42px rgba(36, 28, 101, 0.14) !important;
+}
+
+.services-inner-box h2,
+.services-inner-box h4,
+.timeline-card h4 {
+    color: var(--indigo) !important;
+}
+
+.services-inner-box p,
+.timeline-card p {
+    color: #494657 !important;
+}
+
+/* Research stack: the technical core, with saffron and teal as heritage accents */
+.research-map-section {
+    position: relative;
+    color: #eef2ff;
+    background:
+        radial-gradient(circle at 9% 12%, rgba(217, 144, 47, 0.22), transparent 30%),
+        radial-gradient(circle at 91% 84%, rgba(46, 159, 145, 0.22), transparent 32%),
+        linear-gradient(145deg, #111941 0%, var(--indigo-deep) 52%, #131637 100%) !important;
+    border-top: 4px solid var(--saffron);
+    border-bottom: 4px solid var(--teal);
+}
+
+.research-map-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .16;
+    background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(to bottom, transparent, black 22%, black 78%, transparent);
+}
+
+.research-map-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.research-map-kicker {
+    color: var(--gold-light) !important;
+}
+
+.research-map-intro h3 {
+    color: var(--white) !important;
+    letter-spacing: .01em;
+}
+
+.research-map-intro p {
+    color: #c9d1e6 !important;
+}
+
+.research-stage {
+    border-color: rgba(242, 200, 121, 0.22) !important;
+    background: linear-gradient(145deg, rgba(255,255,255,.085), rgba(255,255,255,.035)) !important;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24) !important;
+}
+
+.research-stage:nth-child(even) {
+    border-color: rgba(142, 216, 205, 0.25) !important;
+}
+
+.research-stage:hover {
+    border-color: var(--gold-light) !important;
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.31) !important;
+}
+
+.research-stage h4 {
+    color: var(--white) !important;
+    font-family: 'Cambo', Georgia, serif;
+}
+
+.research-stage p {
+    color: #bdc7df !important;
+}
+
+.stage-number {
+    color: #1a1731 !important;
+    border-color: rgba(242, 200, 121, 0.75) !important;
+    background: linear-gradient(135deg, var(--gold-light), var(--saffron)) !important;
+    box-shadow: 0 8px 20px rgba(217, 144, 47, 0.22);
+}
+
+.research-stage:nth-child(even) .stage-number {
+    border-color: rgba(142, 216, 205, 0.75) !important;
+    background: linear-gradient(135deg, var(--teal-light), var(--teal)) !important;
+}
+
+.research-stage:not(:nth-child(4)):not(:nth-child(8))::after {
+    color: var(--gold-light) !important;
+}
+
+.project-tags span {
+    color: #ffe0a6 !important;
+    border-color: rgba(242, 200, 121, 0.35) !important;
+    background: rgba(217, 144, 47, 0.10) !important;
+}
+
+.project-tags span:nth-child(even) {
+    color: #a9eee3 !important;
+    border-color: rgba(142, 216, 205, 0.35) !important;
+    background: rgba(46, 159, 145, 0.12) !important;
+}
+
+.research-loop {
+    color: #d4d9e8 !important;
+}
+
+.research-loop::before {
+    background: linear-gradient(90deg, transparent, var(--saffron)) !important;
+}
+
+.research-loop::after {
+    background: linear-gradient(90deg, var(--teal), transparent) !important;
+}
+
+/* Academic timeline uses the same two accent colors */
+.timeline::before {
+    background: linear-gradient(to bottom, var(--teal), var(--indigo), var(--saffron));
+}
+
+.timeline-dot {
+    width: 18px;
+    height: 18px;
+    background: var(--saffron);
+    border: 4px solid var(--parchment-light);
+    box-shadow: 0 0 0 2px var(--indigo);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    background: var(--teal);
+}
+
+/* Buttons and footer complete the palette */
+.btn-hover-lt,
+.btn-dark,
+.dmtop {
+    border-radius: 8px;
+}
+
+.dmtop,
+.btn-hover-lt:hover::before {
+    background: linear-gradient(135deg, var(--indigo), var(--indigo-soft));
+}
+
+.copyrights {
+    border-top: 3px solid var(--saffron);
+    background: linear-gradient(145deg, #111530, var(--indigo-deep));
+}
+
+.footer-distributed,
+.footer-distributed a,
+.footer-distributed .footer-company-name a {
+    color: #ddd8ec;
+}
+
+.footer-distributed a:hover,
+.footer-distributed .footer-company-name a:hover {
+    color: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+    .research-map-section::before {
+        background-size: 28px 28px;
+    }
+
+    .services-inner-box,
+    .timeline-card {
+        border-top-width: 2px;
+    }
 }
